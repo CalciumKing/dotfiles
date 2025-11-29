@@ -1,0 +1,7 @@
+* {
+    background:     #000000;
+    foreground:     #aacfd1;
+    selected:       #aacfd1;
+    active:         #aacfd1;
+    urgent:         #aacfd1;
+}

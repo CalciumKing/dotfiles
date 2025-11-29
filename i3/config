@@ -1,0 +1,15 @@
+set $mod Mod4
+
+# global colors
+set $bg-color 	         #000000
+set $inactive-bg-color   #000000
+set $text-color          #ff0000
+set $inactive-text-color #595959
+set $indicator-color     #600000
+
+# loading configs in other files for organization
+include ~/.config/i3/configs/workspaces.conf
+include ~/.config/i3/configs/windows.conf
+include ~/.config/i3/configs/statusbar.conf
+include ~/.config/i3/configs/i3keybinds.conf
+include ~/.config/i3/configs/startup.conf
