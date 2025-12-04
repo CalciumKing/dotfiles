@@ -1,7 +1,7 @@
 * {
     background:     #000000;
-    foreground:     #aacfd1;
-    selected:       #aacfd1;
-    active:         #aacfd1;
-    urgent:         #aacfd1;
+    foreground:     #c7c7c7;
+    selected:       #c7c7c7;
+    active:         #c7c7c7;
+    urgent:         #c7c7c7;
 }
