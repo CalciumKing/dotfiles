@@ -1,8 +1,8 @@
 set $mod Mod4
 
 # global colors
-set $bg-color 	         #000000
-set $inactive-bg-color   #000000
+set $bg-color 	         #161616
+set $inactive-bg-color   #161616
 set $text-color          #c7c7c7
 set $inactive-text-color #7d7d7d
 set $indicator-color     #c7c7c7
