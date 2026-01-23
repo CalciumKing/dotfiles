@@ -1,0 +1,278 @@
+[
+  {
+    "layer": "top",
+    "position": "left",
+    "modules-left": [
+      "custom/os",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "custom/cava"
+    ],
+    "modules-right": [
+      "custom/spotify",
+      "group/brightness",
+      "group/sound",
+      "group/power"
+    ],
+    "custom/os": {
+      "format": " ",
+      // 
+      "on-click": "rofi -show drun -display-drun '>'",
+      "tooltip": false
+    },
+    "hyprland/workspaces": {
+      "format": "{}",
+      "on-click": "activate"
+    },
+    "custom/cava": {
+      "format": "{}",
+      "rotate": 270,
+      "exec": "/home/calciumking/.config/waybar/scripts/cava.sh",
+      "tooltip": false,
+      "on-click": "kitty --title float -e cava"
+    },
+    "custom/spotify": {
+      "exec": "~/.config/waybar/scripts/spotify.sh",
+      "format": " ",
+      "tooltip-format": "{}",
+      "interval": 2,
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-click-right": "hyprctl dispatch focuswindow class:spotify",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
+    },
+    "group/brightness": {
+      "orientation": "vertical",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "backlight",
+        "backlight/slider"
+      ]
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}",
+      "tooltip-format": "{percent}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "on-scroll-up": "exec brightnessctl set 1%+",
+      "on-scroll-down": "exec brightnessctl set 1%-"
+    },
+    "backlight/slider": {
+      "orientation": "vertical"
+    },
+    "group/sound": {
+      "orientation": "vertical",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "pulseaudio",
+        "pulseaudio#mic",
+        "pulseaudio/slider"
+      ]
+    },
+    "pulseaudio": {
+      "format": "{icon}",
+      "tooltip-format": "{volume}% - {desc}",
+      "format-bluetooth": "{icon}",
+      "format-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+          "",
+          "",
+          "  "
+        ]
+      },
+      "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+      "on-click-right": "pavucontrol",
+      "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_SINK@ 5%+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-",
+      "smooth-scrolling-threshold": 1
+    },
+    "pulseaudio/slider": {
+      "orientation": "vertical"
+    },
+    "pulseaudio#mic": {
+      "format": "{format_source}",
+      "format-source": "",
+      "format-source-muted": "   ",
+      "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
+    },
+    "group/power": {
+      "orientation": "vertical",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/shutdown",
+        "custom/hibernate",
+        "custom/suspend",
+        "custom/reboot"
+      ]
+    },
+    "custom/shutdown": {
+      "format": "⏻ ",
+      "tooltip-format": "Shutdown",
+      "on-click": "systemctl poweroff"
+    },
+    "custom/reboot": {
+      "format": "",
+      "tooltip-format": "Reboot",
+      "on-click": "systemctl reboot"
+    },
+    "custom/suspend": {
+      "format": "",
+      "tooltip-format": "Suspend",
+      "on-click": "systemctl suspend"
+    },
+    "custom/hibernate": {
+      "format": " ",
+      "tooltip-format": "Hibernate",
+      "on-click": "systemctl hibernate"
+    }
+  },
+  {
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+      "wlr/taskbar"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "group/system",
+      "group/connections",
+      "battery"
+    ],
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 18,
+      "on-click": "activate"
+    },
+    "clock": {
+      "format": " {:%I:%M %p} ",
+      // vertical format: "{:%I\n%M\n%p\n——\n%m\n%d}"
+      "tooltip-format": "{:%A, %B %d, %Y}",
+      "on-click": "kitty --title float -e tty-clock -sctb"
+    },
+    "group/system": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "custom/system-icon",
+        "cpu",
+        "memory",
+        "disk",
+        "temperature"
+      ]
+    },
+    "custom/system-icon": {
+      "format": "   ",
+      "tooltip-format": "Open Btop",
+      "on-click": "kitty -e btop"
+    },
+    "cpu": {
+      "format": " "
+    },
+    "memory": {
+      "format": " ",
+      "tooltip-format": "{percentage}% - {used} / {total}"
+    },
+    "disk": {
+      "interval": 30,
+      "format": " ",
+      "tooltip-format": "{percentage_used}% - {used} / {total}"
+    },
+    "temperature": {
+      "format": "{icon} ",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "tooltip-format": "{temperatureF}°F"
+    },
+    "group/connections": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+        "network",
+        "bluetooth"
+      ]
+    },
+    "network": {
+      "format-wifi": "   ",
+      "format-ethernet": "  ",
+      "tooltip-format": "{essid} ({signalStrength}%) - {ifname} via {ipaddr}",
+      //    "format-linked": "",
+      "format-disabled": "  ",
+      "format-disconnected": " ⚠ ",
+      "on-click": "zsh ~/.config/waybar/scripts/wifi-menu.sh"
+    },
+    "bluetooth": {
+      "format": "",
+      "format-disabled": "",
+      "format-connected": " {num_connections}",
+      "tooltip-format-disabled": "Off",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "blueman-manager"
+    },
+    "battery": {
+      "format": " {icon}",
+      "tooltip-format": "{capacity}% - {time}",
+      "format-icons": {
+        "default": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ]
+      },
+      "format-time": "{H}h{M}m",
+      "format-charging": "    ",
+      "tooltip-format-full": "{capacity}% - Full",
+      "interval": 5,
+      "states": {
+        "warning": 15,
+        "critical": 10
+      }
+    }
+  }
+]

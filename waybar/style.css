@@ -1,0 +1,111 @@
+@import url("/home/calciumking/.cache/wal/colors-waybar.css");
+
+* {
+    all: unset;
+    font-size: 20px;
+    font-family: "JetBrainsMono Nerd Font";
+    color: @foreground;
+    margin: 0px;
+    padding: 2px;
+}
+
+#waybar {
+    background-color: transparent;
+}
+
+tooltip {
+    background: @background;
+    border-radius: 10px;
+    border: 2px solid @foreground
+}
+
+#custom-os, #workspaces, #taskbar, #clock, #pulseaudio-slider, #custom-spotify, #system, #sound, #brightness, #connections, #battery, #power {
+    background: @background;
+    color: @foreground;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 4px;
+}
+
+#custom-os {
+    padding: 10px;
+    transition: color 0.5s ease;
+}
+
+#custom-os:hover {
+    color: @color4;
+}
+
+#custom-cava {
+    background: transparent;
+    color: @color4;
+}
+
+#workspaces button, #taskbar button {
+    transition: all 0.5s ease;
+}
+
+#taskbar button.fullscreen, #taskbar button.maximized {
+    border: 2px solid @color4;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent label {
+    font-weight: bold;
+    color: @color4;
+}
+
+#workspaces button.active, #taskbar button.active, button:hover {
+    background-color: @color4;
+    border-radius: 8px;
+}
+
+#workspaces button.active label {
+    color: @background;
+}
+
+button:hover {
+    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+
+#pulseaudio-slider slider, #backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+}
+#pulseaudio-slider trough, #backlight-slider trough {
+    min-height: 80px;
+    min-width: 10px;
+    border-radius: 5px;
+}
+#pulseaudio-slider highlight, #backlight-slider highlight {
+    min-width: 5px;
+    border-radius: 10px;
+    background: @color4;
+}
+
+#battery.warning:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    color: @color4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: transparent;
+    }
+}
