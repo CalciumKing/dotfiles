@@ -1,0 +1,134 @@
+/**
+ * @name The Calcium King Theme
+ * @description A sleek maroon-toned variant of system24
+ * @author The Calcium King
+ * @version 2.0.0
+ * @website https://github.com/CalciumKing/Calciums-Theme
+ * @source https://github.com/CalciumKing/Calciums-Theme/blob/main/theme/CalciumKing.theme.css
+ * @authorId 541352538910359563
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* font */
+    --font: 'JetBrainsMono Nerd Font Mono'; /* change to '' for default discord font */
+    --code-font: 'JetBrainsMono Nerd Font Mono'; /* change to '' for default discord font */
+    letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 2px; /* thickness of unread messages divider and highlighted message borders */
+    --border-thickness: 3px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
+    --border-hover-transition: .4s ease; /* transition for borders when hovered */
+
+    /* animation/transition options */
+    --animations: on; /* off: disable animations/transitions, on: enable animations/transitions */
+    --list-item-transition: .4s ease; /* transition for list items */
+    --dms-icon-svg-transition: .4s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --top-bar-height: var(--gap); /* height of the top bar (discord default is 36px, old discord style is 24px, var(--gap) recommended if button position is set to titlebar) */
+    --top-bar-button-position: titlebar; /* off: default position, hide: hide buttons completely, serverlist: move inbox button to server list, titlebar: move inbox button to channel titlebar (will hide title) */
+    --top-bar-title-position: off; /* off: default centered position, hide: hide title completely, left: left align title (like old discord) */
+    --subtle-top-bar-title: on; /* off: default, on: hide the icon and use subtle text color (like old discord) */
+
+    /* window controls */
+    --custom-window-controls: on; /* off: default window controls, on: custom window controls */
+    --window-control-size: 16px; /* size of custom window controls */
+
+
+    /* dms button options */
+    --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
+    --dms-icon-svg-url: url(''); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
+    --dms-icon-color-before: black; /* normal icon color */
+    --dms-icon-color-after: darkgrey; /* icon color when button is hovered/selected */
+    --custom-dms-background: color; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size property) */
+    --dms-background-color: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(10, 0, 0, 1) 85%); /* fixed color/gradient (css background property) */
+
+    /* background image options */
+    --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
+    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+    /* other options */
+    --small-user-panel: off; /* off: default user panel, on: smaller user panel like in old discord */
+
+    /* unrounding options */
+    --unrounding: on; /* off: default, on: remove rounded corners from panels */
+
+    /* styling options */
+    --custom-spotify-bar: on; /* off: default, on: custom text-like spotify progress bar */
+    --ascii-titles: on; /* off: default, on: use ascii font for titles at the start of a channel */
+    --ascii-loader: system24; /* off: default, system24: use system24 ascii loader, cats: use cats loader */
+
+    /* panel labels */
+    --panel-labels: on; /* off: default, on: add labels to panels */
+    --label-color: var(--text-muted); /* color of labels */
+    --label-font-weight: 500; /* font weight of labels */
+}
+
+/* color options */
+:root {
+    --colors: on; /* off: discord default colors, on: custom colors */
+
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: oklch(95% 0 0); /* other normally white text */
+    --text-2: oklch(85% 0 0); /* headings and important text */
+    --text-3: oklch(75% 0 0); /* normal text */
+    --text-4: oklch(60% 0 0); /* icon buttons and channels */
+    --text-5: oklch(40% 0 0); /* muted channels/chats and timestamps */
+
+    /* background and dark colors */
+    --bg-1: oklch(31% 0 0); /* dark buttons when clicked */
+    --bg-2: oklch(27% 0 0); /* dark buttons */
+    --bg-3: oklch(23% 0 0); /* spacing, secondary elements */
+    --bg-4: oklch(19% 0 0); /* main background color */
+    --hover: var(--maroon-3); /* channels and buttons when hovered */
+    --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
+           /* ^^ var(--maroon-3) for current dm color*/
+    --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
+    --message-hover: var(--maroon-3); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: var(--maroon-1); /* links and other accent text */
+    --accent-2: var(--maroon-1); /* small accent elements */
+    --accent-3: var(--maroon-1); /* accent buttons */
+    --accent-4: var(--maroon-2); /* accent buttons when hovered */
+    --accent-5: var(--maroon-3); /* accent buttons when clicked */
+    --accent-new: var(--maroon-1); /* stuff that's normally red like mute/deafen buttons */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--maroon-1), transparent 90%) 40%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--maroon-1), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
+
+    /* status indicator colors */
+    --online: #40a258;
+    --dnd: var(--maroon-1); /* change to #d83a41 for default */
+    --idle: #cc954c;
+    --streaming: var(--maroon-1); /* change to ##9147ff for default */
+    --offline: #82838b;
+
+    /* border colors */
+    --border-light: oklch(54% 0 0 / 0.1); /* general light border color */
+    --border: var(--active); /* general normal border color */
+    --border-hover: var(--maroon-1); /* border color of panels when hovered */
+    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --maroon-1: rgb(140, 0, 0);
+    --maroon-2: rgb(120, 0, 0);
+    --maroon-3: rgb(100, 0, 0);
+}

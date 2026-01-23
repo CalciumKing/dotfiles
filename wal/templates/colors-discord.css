@@ -1,0 +1,204 @@
+/**
+ * @name The Calcium King Pywal Theme
+ * @description A sleek maroon-toned variant of system24 with dynamic Pywal color support
+ * @author The Calcium King
+ * @version 3.0.0
+ * @website https://github.com/CalciumKing/Calciums-Theme
+ * @source https://github.com/CalciumKing/Calciums-Theme/blob/main/theme/pywall-template.css
+ * @authorId 541352538910359563
+ */
+
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+:root {{
+    /* Pywal color placeholders - will be replaced by Pywal */
+    --background: {background};
+    --color2: {color2};
+    --color3: {color3};
+    --color4: {color4};
+    --color5: {color5};
+    --color7: {color7};
+
+    --colors: on;
+
+    --text-0: var(--bg-4);
+    --text-1: color-mix(in srgb, var(--color7), white 50%);
+    --text-2: color-mix(in srgb, var(--color7), white 30%);
+    --text-3: var(--color7);
+    --text-4: color-mix(in srgb, var(--color7), black 30%);
+    --text-5: color-mix(in srgb, var(--color7), black 50%);
+
+    --bg-1: color-mix(in srgb, var(--background), black 60%);
+    --bg-2: color-mix(in srgb, var(--background), black 40%);
+    --bg-3: color-mix(in srgb, var(--background), black 20%);
+    --bg-4: var(--background);
+
+    --hover: var(--color4);
+    --active: color-mix(in srgb, var(--color4), transparent 80%);
+    --active-2: color-mix(in srgb, var(--color4), transparent 70%);
+    --message-hover: var(--color4);
+
+    --accent-1: var(--color4);
+    --accent-2: var(--color4);
+    --accent-3: var(--color4);
+    --accent-4: color-mix(in srgb, var(--color4), black 15%);
+    --accent-5: color-mix(in srgb, var(--color4), black 30%);
+    --accent-new: var(--color4);
+
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--color4), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--color4), transparent 95%) 40%, transparent);
+    --reply: linear-gradient(to right, color-mix(in hsl, var(--color7), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--color7), transparent 95%) 40%, transparent);
+
+    /* status indicator colors (Optional) */
+    /*
+    --online: var(--color5);
+    --dnd: var(--color4);
+    --idle: var(--color4);
+    --streaming: var(--color4);
+    --offline: #82838b;
+    */
+
+    --border-light: color-mix(in srgb, var(--color7), transparent 90%);
+    --border: color-mix(in srgb, var(--color4), transparent 80%);
+    --border-hover: var(--color4);
+    --button-border: color-mix(in srgb, var(--color7), transparent 90%);
+}}
+
+body {{
+    --font: 'JetBrainsMono Nerd Font Mono';
+    --code-font: 'JetBrainsMono Nerd Font Mono';
+    letter-spacing: -0.05ch;
+
+    --gap: 12px;
+    --divider-thickness: 2px;
+    --border-thickness: 3px;
+    --border-hover-transition: .4s ease;
+
+    --animations: on;
+    --list-item-transition: .4s ease;
+    --dms-icon-svg-transition: .4s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: on;
+
+    --custom-window-controls: on;
+    --window-control-size: 16px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: black;
+    --dms-icon-color-after: darkgrey;
+    --custom-dms-background: color;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: radial-gradient(circle, var(--color4) 0%, rgba(10, 0, 0, 1) 85%);
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --small-user-panel: off;
+    --unrounding: on;
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}}
+
+/* Pywal Discord theme overrides for compatibility */
+* {{
+    --background-primary: var(--background);
+    --background-secondary: var(--background);
+    --background-tertiary: var(--background);
+    --background-primary-alt: var(--background);
+    --background-secondary-alt: var(--background);
+    --background-tertiary-alt: var(--background);
+    --channeltextarea-background: var(--background);
+    --custom-channel-members-bg: var(--background);
+    --profile-gradient-primary-color: var(--background);
+    --profile-gradient-secondary-color: var(--background);
+    --__header-bar-background: var(--background) !important;
+    --bg-base-tertiary: var(--background);
+
+    /* darker backgrounds */
+    --card-primary-bg: color-mix(in srgb, var(--background), black 20%);
+    --input-background: color-mix(in srgb, var(--background), black 20%);
+    --autocomplete-bg: color-mix(in srgb, var(--background), black 20%);
+    --background-nested-floating: color-mix(in srgb, var(--background), black 20%);
+    --background-floating: color-mix(in srgb, var(--background), black 20%);
+    --scrollbar-auto-track: color-mix(in srgb, var(--background), black 20%);
+    --scrollbar-thin-track: color-mix(in srgb, var(--background), black 20%);
+    --border-subtle: color-mix(in srgb, var(--background), black 20%);
+    --background-base-lowest: color-mix(in srgb, var(--background), black 20%);
+    --background-surface-high: color-mix(in srgb, var(--background), black 20%);
+
+    /* medium dark backgrounds */
+    --button-secondary-background: color-mix(in srgb, var(--background), black 30%);
+    --background-surface-higher: color-mix(in srgb, var(--background), black 30%);
+    --background-base-lower: color-mix(in srgb, var(--background), black 35%);
+
+    /* hover/darker backgrounds */
+    --background-message-hover: color-mix(in srgb, var(--background), black 40%);
+    --button-secondary-background-hover: color-mix(in srgb, var(--background), black 40%);
+    --background-base-low: color-mix(in srgb, var(--background), black 40%);
+    --background-surface-highest: color-mix(in srgb, var(--background), black 40%);
+    --chat-background-default: color-mix(in srgb, var(--background), black 45%);
+    --button-secondary-background-active: color-mix(in srgb, var(--background), black 60%);
+
+    /* primary colors */
+    --primary-630: var(--background);
+
+    /* color2 mappings */
+    --scrollbar-auto-thumb: var(--color2);
+    --scrollbar-thin-thumb: var(--color2);
+    --interactive-muted: var(--color2);
+    --text-muted: var(--color2);
+    --background-modifier-hover: color-mix(in srgb, var(--color2), black 40%);
+    --background-modifier-active: color-mix(in srgb, var(--color2), black 20%);
+    --background-modifier-accent: var(--color2);
+    --background-accent: var(--color2);
+    --input-border: var(--color2);
+    --border-normal: var(--color2);
+    --icon-secondary: var(--color2);
+    --icon-tertiary: var(--color2);
+    --channel-icon: var(--color2);
+    --channels-default: var(--color2);
+    --header-primary: var(--color2);
+    --__lottieIconColor: var(--color2);
+    --interactive-normal: var(--color2);
+
+    /* color3 mappings */
+    --red-400: var(--color3);
+    --background-modifier-selected: var(--color3);
+    --notice-background-positive: color-mix(in srgb, var(--color3), black 75%);
+    --notice-text-positive: var(--color3);
+
+    /* color4 mappings (main accent) */
+    --status-danger: var(--color4);
+    --button-outline-danger-border: var(--color4);
+    --button-outline-danger-text: var(--color4);
+    --button-danger-background: var(--color4);
+    --yellow-300: var(--color4);
+
+    /* color5 mappings (light theme color) */
+    --brand-experiment: var(--color5);
+    --brand-experiment-360: var(--color5);
+    --brand-experiment-500: var(--color5);
+    --profile-gradient-button-color: var(--color5);
+    --green-360: var(--color5);
+
+    /* color7 mappings (text colors) */
+    --text-normal: var(--color7);
+    --interactive-active: var(--color7);
+}}
