@@ -1,0 +1,102 @@
+* {
+    bg: #212121;
+    hv: #303030;
+    primary: #D0CFCC;
+    font: "Monospace 12";
+    background-color: @bg;
+    border: 0px;
+}
+
+window {
+    width: 700;
+    orientation: horizontal;
+    location: center;
+    anchor: center;
+    border: 0px;
+    border-radius: 6px;
+    spacing: 0;
+    children: [ mainbox ];
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    color: @primary;
+    padding: 11px;
+    border: 2px;
+    border-color: @primary;
+    border-radius: 6px 6px 0px 0px;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 5px 0px 0px;
+}
+
+listview {
+    layout: vertical;
+    padding: 8px;
+    lines: 7;
+    columns: 2;
+    border: 0px 2px 2px 2px;
+    border-radius: 0px 0px 6px 6px;
+    border-color: @primary;
+    dynamic: false;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    vertical-align: 1;
+    color: @primary;
+    font: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected.normal, element normal active {
+    color: @primary;
+    background-color: @hv;
+    border-radius: 8px;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    size: 2.5em;
+}
+
+element normal urgent {
+    background-color: @primary;
+}
+
+element selected active {
+    background: @hv;
+    foreground: @bg;
+}
+
+button {
+    padding: 6px;
+    color: @primary;
+    horizonatal-align: 0.5;
+
+    border: 2px 0px 2px 2px;
+    border-radius: 4px 0px 0px 4px;
+    border-color: @primary;
+}
+
+button selected normal {
+    border: 2px 0px 2px 2px;
+    border-color: @primary;
+}
