@@ -4,7 +4,9 @@
     "useQuickCss": true,
     "themeLinks": [],
     "eagerPatches": false,
-    "enabledThemes": [],
+    "enabledThemes": [
+        "pywal-vencord.theme.css"
+    ],
     "enableReactDevtools": false,
     "frameless": true,
     "transparent": false,
