@@ -238,7 +238,7 @@
       "format-wifi": "   ",
       "format-ethernet": "  ",
       "tooltip-format": "{essid} ({signalStrength}%) - {ifname} via {ipaddr}",
-      //    "format-linked": "",
+      "format-linked": "   ",
       "format-disabled": "  ",
       "format-disconnected": " ⚠ ",
       "on-click": "zsh ~/.config/waybar/scripts/wifi-menu.sh"
