@@ -107,7 +107,8 @@
             "blurAmount": 10
         },
         "CallTimer": {
-            "enabled": true
+            "enabled": true,
+            "format": "stopwatch"
         },
         "ClearURLs": {
             "enabled": false
@@ -287,7 +288,8 @@
         "MessageClickActions": {
             "enabled": true,
             "requireModifier": false,
-            "enableDoubleClickToEdit": true
+            "enableDoubleClickToEdit": true,
+            "enableDoubleClickToReply": true
         },
         "MessageLatency": {
             "enabled": false
@@ -620,6 +622,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1769192746802
+        "settingsSyncVersion": 1770442204013
     }
 }
