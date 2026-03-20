@@ -12,6 +12,10 @@
 - **Extensive Documentation** - Step-by-step guides with explanations and examples to provide a deep understanding, ensuring that further customization can be done with ease
 
 ### Showcase
+<img src="images/julius.png">
+<p align="center">
+	Various terminal applications (cava, cmatrix, tty-clock) complimenting julius ascii wallpaper
+</p>
 <img src="images/fastfetch.png">
 <p align="center">
 	System information and ascii art (fastfetch) using wallpaper color scheme
