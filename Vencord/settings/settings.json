@@ -310,9 +310,6 @@
             "logDeletes": true,
             "inlineEdits": true
         },
-        "MessageTags": {
-            "enabled": false
-        },
         "MoreQuickReactions": {
             "enabled": false
         },
@@ -606,6 +603,12 @@
         },
         "SupportHelper": {
             "enabled": true
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "NoDefaultHangStatus": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -622,6 +625,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1770442204013
+        "settingsSyncVersion": 1773941478730
     }
 }
