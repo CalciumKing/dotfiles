@@ -33,6 +33,10 @@ It is highly recommended to follow the [Installation Guide](INSTALL.md) for step
 <p align="center">
 	System information and ascii art (fastfetch) using brutalist wallpaper color scheme
 </p>
+<img src="images/hyprlock.png">
+<p align="center">
+	Lock screen (hyprlock) using space wallpaper and color scheme
+</p>
 <img src="images/desktop.png">
 <p align="center">
 	Terminal applications (cava, tty-clock) using forest wallpaper color scheme
