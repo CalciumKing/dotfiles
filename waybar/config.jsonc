@@ -199,7 +199,7 @@
     "temperature": {
       "format": "{icon} ",
       "format-icons": ["", "", "", "", "", "", "󰈸"],
-      "tooltip-format": "{temperatureF}°F"
+      "tooltip-format": "{temperatureF}°F ({temperatureC}°C)"
     },
     "group/connections": {
       "orientation": "horizontal",
