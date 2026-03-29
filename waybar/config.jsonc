@@ -17,7 +17,7 @@
     ],
     "custom/os": {
       "format": " ",
-      // 
+      // 
       "on-click": "rofi -show drun -display-drun '>'",
       "tooltip": false
     },
@@ -58,17 +58,7 @@
       "device": "intel_backlight",
       "format": "{icon}",
       "tooltip-format": "{percent}%",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
       "on-scroll-up": "exec brightnessctl set 1%+",
       "on-scroll-down": "exec brightnessctl set 1%-"
     },
@@ -91,7 +81,7 @@
       "format": "{icon}",
       "tooltip-format": "{volume}% - {desc}",
       "format-bluetooth": "{icon}",
-      "format-muted": "",
+      "format-muted": " ",
       "format-icons": {
         "headphone": "",
         "hands-free": "",
@@ -99,11 +89,7 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": [
-          "",
-          "",
-          "  "
-        ]
+        "default": ["", "", "  "]
       },
       "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
       "on-click-right": "pavucontrol",
@@ -117,7 +103,7 @@
     "pulseaudio#mic": {
       "format": "{format_source}",
       "format-source": "",
-      "format-source-muted": "   ",
+      "format-source-muted": " ",
       "on-click": "wpctl set-mute @DEFAULT_SOURCE@ toggle"
     },
     "group/power": {
@@ -199,10 +185,10 @@
       "on-click": "kitty -e btop"
     },
     "cpu": {
-      "format": " "
+      "format": " "
     },
     "memory": {
-      "format": " ",
+      "format": " ",
       "tooltip-format": "{percentage}% - {used} / {total}"
     },
     "disk": {
@@ -212,15 +198,7 @@
     },
     "temperature": {
       "format": "{icon} ",
-      "format-icons": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "format-icons": ["", "", "", "", "", "", "󰈸"],
       "tooltip-format": "{temperatureF}°F"
     },
     "group/connections": {
@@ -235,17 +213,18 @@
       ]
     },
     "network": {
-      "format-wifi": "   ",
-      "format-ethernet": "  ",
+      "format-wifi": " {icon} ",
+      "format-ethernet": "   ",
       "tooltip-format": "{essid} ({signalStrength}%) - {ifname} via {ipaddr}",
       "format-linked": "   ",
-      "format-disabled": "  ",
-      "format-disconnected": " ⚠ ",
+      "format-disabled": " 󰤮 ",
+      "format-disconnected": " 󰤫 ",
+      "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
       "on-click": "zsh ~/.config/waybar/scripts/wifi-menu.sh"
     },
     "bluetooth": {
       "format": "",
-      "format-disabled": "",
+      "format-disabled": "󰂲",
       "format-connected": " {num_connections}",
       "tooltip-format-disabled": "Off",
       "tooltip-format": "{controller_alias}\t{controller_address}",
@@ -254,20 +233,16 @@
       "on-click": "blueman-manager"
     },
     "battery": {
-      "format": " {icon}",
+      "format": " {icon} ",
+      "format-charging": " {icon} ",
+      "format-full": " 󱟢 ",
       "tooltip-format": "{capacity}% - {time}",
-      "format-icons": {
-        "default": [
-          " ",
-          " ",
-          " ",
-          " ",
-          " "
-        ]
-      },
       "format-time": "{H}h{M}m",
-      "format-charging": "    ",
-      "tooltip-format-full": "{capacity}% - Full",
+      "tooltip-format-full": "Full",
+      "format-icons": {
+        "default": ["󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+      },
       "interval": 5,
       "states": {
         "warning": 15,
