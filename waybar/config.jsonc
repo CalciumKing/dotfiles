@@ -235,7 +235,8 @@
     "battery": {
       "format": " {icon} ",
       "format-charging": " {icon} ",
-      "format-full": " 󱟢 ",
+      // laptop uses plug power instead of battery power
+      "format-full": "  ",
       "tooltip-format": "{capacity}% - {time}",
       "format-time": "{H}h{M}m",
       "tooltip-format-full": "Full",
