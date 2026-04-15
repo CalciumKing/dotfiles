@@ -39,7 +39,7 @@
       "interval": 2,
       "return-type": "json",
       "on-click": "playerctl play-pause",
-      "on-click-right": "hyprctl dispatch focuswindow class:spotify",
+      "on-click-right": "hyprctl dispatch focuswindow class:Spotify",
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous"
     },
