@@ -219,7 +219,7 @@
       "format-linked": "   ",
       "format-disabled": " 󰤮 ",
       "format-disconnected": " 󰤫 ",
-      "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+      "format-icons": ["󰤫", "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
       "on-click": "zsh ~/.config/waybar/scripts/wifi-menu.sh"
     },
     "bluetooth": {
