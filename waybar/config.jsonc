@@ -189,7 +189,7 @@
     },
     "memory": {
       "format": " ",
-      "tooltip-format": "{percentage}% - {used} / {total}"
+      "tooltip-format": "{percentage}% - {used}GiB / {total}GiB"
     },
     "disk": {
       "interval": 30,
