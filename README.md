@@ -5,7 +5,7 @@
 > 
 > Daily driver on Arch + Hyprland, theme colors generated dynamically based on wallpaper
 
-### [Installation Guide](INSTALL.md)
+### [Installation Guide](INSTALL.md) | [Wallpapers](wallpapers/)
 
 ---
 
