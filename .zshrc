@@ -17,6 +17,12 @@ setopt HIST_IGNORE_SPACE
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 PROMPT='%B%n@%m:%~$%b '
 
 fastfetch -c ~/.config/fastfetch/config.jsonc
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
