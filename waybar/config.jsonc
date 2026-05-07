@@ -38,10 +38,10 @@
       "tooltip-format": "{}",
       "interval": 2,
       "return-type": "json",
-      "on-click": "playerctl play-pause",
+      "on-click": "playerctl -p spotify play-pause",
       "on-click-right": "hyprctl dispatch focuswindow class:Spotify",
-      "on-scroll-up": "playerctl next",
-      "on-scroll-down": "playerctl previous"
+      "on-scroll-up": "playerctl -p spotify next",
+      "on-scroll-down": "playerctl -p spotify previous"
     },
     "group/brightness": {
       "orientation": "vertical",
