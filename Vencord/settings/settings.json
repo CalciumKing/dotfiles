@@ -270,9 +270,6 @@
         "KeepCurrentChannel": {
             "enabled": false
         },
-        "LastFMRichPresence": {
-            "enabled": false
-        },
         "LoadingQuotes": {
             "enabled": false
         },
@@ -599,7 +596,8 @@
         },
         "Settings": {
             "enabled": true,
-            "settingsLocation": "aboveNitro"
+            "settingsLocation": "aboveNitro",
+            "includeVencordInfoWhenCopying": true
         },
         "SupportHelper": {
             "enabled": true
@@ -608,6 +606,18 @@
             "enabled": false
         },
         "NoDefaultHangStatus": {
+            "enabled": false
+        },
+        "CharacterCounter": {
+            "enabled": false
+        },
+        "NoMiddleClickPaste": {
+            "enabled": true
+        },
+        "MusicRichPresence": {
+            "enabled": false
+        },
+        "TenorGifSearch": {
             "enabled": false
         }
     },
@@ -625,6 +635,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1773941478730
-    }
+        "settingsSyncVersion": 1787769667032
+    },
+    "windowsMaterial": "none"
 }
