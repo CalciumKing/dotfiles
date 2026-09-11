@@ -16,7 +16,11 @@
       "group/power"
     ],
     "custom/os": {
-      "format": " ",
+      "format": "ᛝ",
+      // ☦
+      // ᛟ
+      // ᛝ
+      //  
       // 
       "on-click": "rofi -show drun -display-drun '>'",
       "tooltip": false
