@@ -1,0 +1,11 @@
+{
+  "ipBlacklist": [""],
+  "port": 9090,
+  "macBlacklist": [""],
+  "hideIp": true,
+  "macWhitelist": [""],
+  "fontSize": 30,
+  "darkMode": true,
+  "ipWhitelist": [""],
+  "username": "archlinux"
+}
