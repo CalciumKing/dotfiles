@@ -38,7 +38,7 @@
     },
     "custom/spotify": {
       "exec": "~/.config/waybar/scripts/spotify.sh",
-      "format": " ",
+      "format": "   ",
       "tooltip-format": "{}",
       "interval": 2,
       "return-type": "json",
@@ -124,22 +124,22 @@
       ]
     },
     "custom/shutdown": {
-      "format": "⏻ ",
+      "format": "  ⏻",
       "tooltip-format": "Shutdown",
       "on-click": "systemctl poweroff"
     },
     "custom/reboot": {
-      "format": "",
+      "format": " ",
       "tooltip-format": "Reboot",
       "on-click": "systemctl reboot"
     },
     "custom/suspend": {
-      "format": "",
+      "format": "  ",
       "tooltip-format": "Suspend",
       "on-click": "systemctl suspend"
     },
     "custom/hibernate": {
-      "format": " ",
+      "format": " ",
       "tooltip-format": "Hibernate",
       "on-click": "systemctl hibernate"
     }
@@ -201,7 +201,7 @@
       "tooltip-format": "{percentage_used}% - {used} / {total}"
     },
     "temperature": {
-      "format": "{icon} ",
+      "format": "{icon}",
       "format-icons": ["", "", "", "", "", "", "󰈸"],
       "tooltip-format": "{temperatureF}°F ({temperatureC}°C)"
     },

@@ -178,9 +178,6 @@
         "Experiments": {
             "enabled": false
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "F8Break": {
             "enabled": false
         },
@@ -617,8 +614,14 @@
         "MusicRichPresence": {
             "enabled": false
         },
-        "TenorGifSearch": {
+        "GifProviderSwitcher": {
             "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": false
+        },
+        "BetterYouTubeEmbeds": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -635,7 +638,8 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1787769667032
+        "settingsSyncVersion": 1795301107781
     },
-    "windowsMaterial": "none"
+    "windowsMaterial": "none",
+    "nativeTitleBar": false
 }
